@@ -1,0 +1,334 @@
+/* 基础样式 */
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
+    min-height: 100vh;
+}
+
+.login-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 0 20px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 标题样式 */
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-header h1 {
+    color: #2a75bb;
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.1em;
+}
+
+/* 表单样式 */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #444;
+    font-weight: 600;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-group i:first-child {
+    position: absolute;
+    left: 15px;
+    color: #2a75bb;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 45px;
+    border: 2px solid #e1e5ee;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #2a75bb;
+    box-shadow: 0 0 0 4px rgba(42, 117, 187, 0.1);
+    outline: none;
+}
+
+/* 密码显示切换按钮 */
+.password-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background: #f0f2f5;
+    border: none;
+    border-radius: 8px;
+    color: #666;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.password-toggle:hover {
+    background: #e4e6e9;
+    color: #2a75bb;
+}
+
+/* 表单选项 */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.forgot-password {
+    color: #2a75bb;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: #1b5690;
+    text-decoration: underline;
+}
+
+/* 登录按钮 */
+.login-button {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #2a75bb 0%, #1b5690 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.login-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(42, 117, 187, 0.3);
+}
+
+/* 社交登录 */
+.social-login {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.social-login p {
+    color: #666;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.social-login p::before,
+.social-login p::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30%;
+    height: 1px;
+    background: #ddd;
+}
+
+.social-login p::before {
+    left: 0;
+}
+
+.social-login p::after {
+    right: 0;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-button {
+    flex: 1;
+    max-width: 150px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.social-button.weixin {
+    background: #07c160;
+    color: white;
+}
+
+.social-button.qq {
+    background: #12b7f5;
+    color: white;
+}
+
+.social-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 注册链接 */
+.register-link {
+    text-align: center;
+    margin-top: 25px;
+    color: #666;
+}
+
+.register-link a {
+    color: #2a75bb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* 动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .login-box {
+        padding: 30px 20px;
+    }
+
+    .login-header h1 {
+        font-size: 1.8em;
+    }
+
+    .social-buttons {
+        flex-direction: column;
+    }
+
+    .social-button {
+        max-width: none;
+    }
+}
+
+/* 深色模式 */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: linear-gradient(135deg, #1a1c20 0%, #2c3e50 100%);
+    }
+
+    .login-box {
+        background: rgba(30, 34, 39, 0.95);
+    }
+
+    .login-header h1 {
+        color: #3498db;
+    }
+
+    .subtitle {
+        color: #bdc3c7;
+    }
+
+    .input-group input {
+        background: rgba(30, 34, 39, 0.9);
+        border-color: #34495e;
+        color: #ecf0f1;
+    }
+
+    .password-toggle {
+        background: #2c3e50;
+        color: #ecf0f1;
+    }
+
+    .password-toggle:hover {
+        background: #34495e;
+    }
+
+    .social-login p {
+        color: #bdc3c7;
+    }
+
+    .social-login p::before,
+    .social-login p::after {
+        background: #34495e;
+    }
+
+    .register-link {
+        color: #bdc3c7;
+    }
+} 
+/* 修改输入框样式 */
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-group i {
+    position: absolute;
+    left: 15px;
+    color: #2a75bb;
+    transition: all 0.3s ease;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 45px;
+    border: 2px solid #e1e5ee;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.input-group input:focus {
+    border-color: #2a75bb;
+    box-shadow: 0 0 0 4px rgba(42, 117, 187, 0.1);
+    outline: none;
+}
+
+/* 移除密码显示按钮相关样式 */
+/* 删除 .password-toggle 相关样式 */

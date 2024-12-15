@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>登录 - 数码宝贝主题网站</title>
+    <link rel="stylesheet" href="zyj/main.css">
+    <link rel="stylesheet" href="zyj/login.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/98ac4923e002bc4ee65e134f66a3a6ff.jpeg" alt="数码宝贝" class="logo">
+      </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">主页</a></li>
+                <li><a href="about.html">数码宝贝介绍</a></li>
+                <li><a href="pokedex.html">数码怪兽图鉴</a></li>
+                <li><a href="register.html">注册</a></li>
+                <li><a href="login.html">登录</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <h1>训练师登录</h1>
+                <p class="subtitle">欢迎回来，训练师！</p>
+            </div>
+
+            <form id="loginForm" class="login-form" novalidate>
+                <div class="form-group">
+                    <label for="email">电子邮箱</label>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" name="email" required
+                               placeholder="输入你的电子邮箱">
+                    </div>
+                    <span class="error-message"></span>
+                </div>
+
+<div class="form-group">
+    <label for="password">密码</label>
+    <div class="input-group">
+        <i class="fas fa-lock"></i>
+        <input type="password" id="password" name="password" required
+               placeholder="输入你的密码">
+    </div>
+    <span class="error-message"></span>
+</div>
+
+                <div class="form-options">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="remember" name="remember">
+                        <div class="custom-checkbox">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <span class="checkbox-label">记住我</span>
+                    </label>
+                    <a href="#" class="forgot-password">忘记密码？</a>
+                </div>
+
+                <button type="submit" class="login-button">
+                    <span>登录</span>
+                    <i class="fas fa-sign-in-alt"></i>
+                </button>
+
+                
+            </form>
+
+            <div class="register-link">
+                还不是训练师？<a href="register.html">立即注册</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        
+        <p>© 2024 数码宝贝主题网站. 保留所有权利。</p>
+        <p>数码宝贝及相关素材版权属于郑煜静。</p>
+    </footer>
+
+    <script src="zyj/login.js"></script>
+</body>
+</html> 

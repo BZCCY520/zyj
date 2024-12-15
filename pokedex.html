@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>数码怪兽图鉴 - 数码宝贝主题网站</title>
+    <link rel="stylesheet" href="zyj/main.css">
+    <link rel="stylesheet" href="zyj/pokedex.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/98ac4923e002bc4ee65e134f66a3a6ff.jpeg" alt="数码宝贝" class="logo">
+      </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">主页</a></li>
+                <li><a href="about.html">数码宝贝介绍</a></li>
+                <li><a href="pokedex.html">数码宝贝图鉴</a></li>
+                <li><a href="register.html">注册</a></li>
+                <li><a href="login.html">登录</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="pokedex-content">
+        <section class="pokedex-header">
+            <h1>数码怪兽图鉴</h1>
+            <div class="fun-counter">
+                <span>已收集数码兽：</span>
+                <div class="number-counter">003</div>
+                <span>/150</span>
+            </div>
+            <p>探索所有数码怪兽的详细信息，了解它们的特性、技能和进化路线。
+                <a href="http://www.digimons.net/index.html" target="_blank" class="database-link">
+                    访问完整数码兽数据库 <i class="fas fa-external-link-alt"></i>
+                </a>
+            </p>
+            
+            <div class="search-filter-container">
+                <div class="search-box">
+                    <input type="text" id="pokemon-search" placeholder="搜索数码怪兽...">
+                    <button type="button"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="filter-options">
+                    <select id="type-filter">
+                        <option value="">所有属性</option>
+                        <option value="electric">飞行系</option>
+                        <option value="fire">火系</option>
+                        <option value="grass">草系</option>
+                        <option value="water">水系</option>
+                    </select>
+                    
+                    <select id="sort-option">
+                        <option value="number">按图鉴编号</option>
+                        <option value="name">按名称</option>
+                        <option value="type">按属性</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <div class="easter-egg-trigger">
+            <img src="images/98ac4923e002bc4ee65e134f66a3a6ff.jpeg" alt="隐藏彩蛋" class="bounce-animation">
+            <div class="tooltip">我是鬼！</div>
+        </div>
+
+        <section class="pokemon-list">
+            <div class="pokemon-card" data-type="electric">
+                <span class="pokemon-number">#025</span>
+                <img src="images/98ac4923e002bc4ee65e134f66a3a6ff.jpeg" 
+                     srcset="images/pikachu-small.jpg 300w, images/pikachu-medium.jpg 600w, images/pikachu-large.jpg 1200w"
+                     sizes="(max-width: 600px) 300px, (max-width: 1200px) 600px, 1200px"
+                     alt="滚球兽" loading="lazy">
+              <h2>滚球兽</h2>
+                <div class="type-badges">
+                    <span class="type-badge electric">电气系</span>
+                </div>
+                <div class="pokemon-info">
+                    <p><strong>特性：</strong>静电</p>
+                    <p><strong>身高：</strong>0.4 m</p>
+                    <p><strong>体重：</strong>6.0 kg</p>
+                    <div class="evolution-chain">
+                        <p><strong>进化：</strong></p>
+                        <div class="evolution-steps">
+                            <span>滚球兽</span>
+                            <i class="fas fa-arrow-right"></i>
+                            <span>亚古兽</span>
+                            <i class="fas fa-arrow-right"></i>
+                            <span>暴龙兽</span>
+                        </div>
+                    </div>
+                    <a href="http://www.digimons.net/index.html#reference" target="_blank" class="more-info-link">
+                        查看完整图鉴资料 <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                <button class="details-btn">查看详情</button>
+            </div>
+
+            <div class="pokemon-card" data-type="fire,flying">
+                <span class="pokemon-number">#006</span>
+                <img src="images/5.png" alt="奥米加兽">
+              <h2>奥米加兽</h2>
+                <div class="type-badges">
+                    <span class="type-badge fire">火系</span>
+                    <span class="type-badge flying">战斗系</span>
+                </div>
+                <div class="pokemon-info">
+                    <p><strong>特性：</strong>猛火</p>
+                    <p><strong>身高：</strong>1.7 m</p>
+                    <p><strong>体重：</strong>90.5 kg</p>
+                    <div class="evolution-chain">
+                        <p><strong>进化：</strong></p>
+                        <div class="evolution-steps">
+                            <span>奥米加兽</span>
+                            <i class="fas fa-arrow-right"></i>
+                            <span>奥米加兽</span>
+                            <i class="fas fa-arrow-right"></i>
+                            <span>奥米加兽</span>
+                        </div>
+                    </div>
+                        查看完整图鉴资料 <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                <button class="details-btn">查看详情</button>
+            </div>
+
+            <div class="pokemon-card" data-type="fire,flying">
+                <span class="pokemon-number">#006</span>
+                <img src="images/6.png" alt="奥米加兽">
+              <h2>杰斯兽</h2>
+                <div class="type-badges">
+                    <span class="type-badge fire">火系</span>
+                    <span class="type-badge flying">战斗系</span>
+                </div>
+                <div class="pokemon-info">
+                    <p><strong>特性：</strong>猛火</p>
+                    <p><strong>身高：</strong>1.7 m</p>
+                    <p><strong>体重：</strong>90.5 kg</p>
+                    <div class="evolution-chain">
+                        <p><strong>进化：</strong></p>
+                        <div class="evolution-steps">
+                            <span>奥米加兽</span>
+                            <i class="fas fa-arrow-right"></i>
+                            <span>奥米加兽</span>
+                            <i class="fas fa-arrow-right"></i>
+                            <span>奥米加兽</span>
+                        </div>
+                    </div>
+                        查看完整图鉴资料 <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                <button class="details-btn">查看详情</button>
+            </div>
+        </section>
+
+        <div class="pagination">
+            <button class="prev-page"><i class="fas fa-chevron-left"></i> 上一页</button>
+            <div class="page-numbers">
+                <span class="active">1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>...</span>
+                <span>10</span>
+            </div>
+            <button class="next-page">下一页 <i class="fas fa-chevron-right"></i></button>
+        </div>
+    </main>
+
+
+    <div class="pokemon-modal" id="pokemon-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+            </div>
+        </div>
+    </div>
+
+    <script src="zyj/pokedex.js"></script>
+    
+    </script>
+</body>
+</html>

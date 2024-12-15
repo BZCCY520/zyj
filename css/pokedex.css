@@ -1,0 +1,401 @@
+.search-filter-container {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 25px;
+    padding: 5px 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 300px;
+}
+
+.search-box input {
+    border: none;
+    padding: 10px;
+    flex: 1;
+    outline: none;
+}
+
+.search-box button {
+    background: none;
+    border: none;
+    color: #2a75bb;
+    cursor: pointer;
+}
+
+.filter-options {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-options select {
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    outline: none;
+    cursor: pointer;
+}
+
+.pokemon-card {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.pokemon-card:hover {
+    transform: translateY(-5px);
+}
+
+.pokemon-number {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9em;
+}
+
+.type-badges {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.type-badge {
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: white;
+    font-size: 0.9em;
+}
+
+.type-badge.electric { background-color: #F8D030; }
+.type-badge.fire { background-color: #F08030; }
+.type-badge.flying { background-color: #A890F0; }
+.type-badge.grass { background-color: #78C850; }
+
+.evolution-chain {
+    margin-top: 15px;
+}
+
+.evolution-steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.evolution-steps i {
+    color: #2a75bb;
+    font-size: 0.8em;
+}
+
+.details-btn {
+    background: #2a75bb;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.details-btn:hover {
+    background: #1b5690;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.page-numbers {
+    display: flex;
+    gap: 10px;
+}
+
+.page-numbers span {
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.page-numbers span.active {
+    background: #2a75bb;
+    color: white;
+}
+
+.pokemon-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    margin: 5% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .search-filter-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-options {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+    }
+} 
+/* 添加到现有的 CSS 文件末尾 */
+
+.pokemon-detail {
+    padding: 20px;
+}
+
+.pokemon-detail h2 {
+    text-align: center;
+    color: #2a75bb;
+    margin-bottom: 20px;
+}
+
+.pokemon-detail img {
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.stats-container {
+    margin: 20px 0;
+}
+
+.stats-container h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.stats-grid {
+    display: grid;
+    gap: 10px;
+}
+
+.stat-item {
+    display: grid;
+    grid-template-columns: 80px 1fr 40px;
+    align-items: center;
+    gap: 10px;
+}
+
+.stat-name {
+    font-weight: bold;
+    color: #666;
+}
+
+.stat-bar {
+    height: 10px;
+    background: #eee;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.stat-fill {
+    height: 100%;
+    background: #2a75bb;
+    transition: width 0.3s ease;
+}
+
+.pokemon-description {
+    margin-top: 20px;
+    line-height: 1.6;
+    color: #666;
+    text-align: justify;
+}
+
+/* 动画效果 */
+.pokemon-card {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .stat-item {
+        grid-template-columns: 60px 1fr 30px;
+    }
+    
+    .pokemon-detail img {
+        max-width: 200px;
+    }
+}
+.pokemon-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.database-link {
+    display: inline-block;
+    margin-left: 1rem;
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s;
+}
+
+.database-link:hover {
+    color: #388E3C;
+    text-decoration: underline;
+}
+
+.more-info-link {
+    display: block;
+    margin-top: 1rem;
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 0.9em;
+    text-align: right;
+}
+
+.more-info-link:hover {
+    color: #388E3C;
+    text-decoration: underline;
+}
+
+.fa-external-link-alt {
+    font-size: 0.8em;
+    margin-left: 0.3rem;
+}
+
+/* 数字计数器样式 */
+.fun-counter {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.number-counter {
+    font-family: monospace;
+    background: #4CAF50;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* 卡片翻转效果 */
+.pokemon-card {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.pokemon-card.flipped {
+    transform: rotateY(180deg);
+}
+
+/* 彩蛋动画 */
+.easter-egg-trigger {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.bounce-animation {
+    width: 100%;
+    height: 100%;
+    animation: bounce 2s infinite;
+}
+
+.tooltip {
+    position: absolute;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.easter-egg-trigger:hover .tooltip {
+    opacity: 1;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* 派对模式 */
+.party-mode {
+    animation: party 0.5s infinite;
+}
+
+@keyframes party {
+    0% { background-color: #ff69b4; }
+    25% { background-color: #87ceeb; }
+    50% { background-color: #98fb98; }
+    75% { background-color: #dda0dd; }
+    100% { background-color: #ff69b4; }
+}
